@@ -20,8 +20,5 @@ def main():
         default=None,
     )
     args = parser.parse_args()
-
     globals()[args.subcommand](args.filepath)
 
-if __name__ == "__main__":
-    main()
