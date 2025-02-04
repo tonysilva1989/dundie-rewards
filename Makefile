@@ -14,7 +14,7 @@ virtualenv:
 watch:
 	@.venv/bin/ptw -- -vv -s tests/
 
-# TODO: Check --profile argument
+# TODO: Check --profile=NNNNN --logfile=/tmp/... argument
 ipython:
 	@.venv/bin/ipython
 
