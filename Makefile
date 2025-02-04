@@ -10,12 +10,16 @@ install:
 virtualenv:
 	@.venv/bin/python -m pip -m venv .venv
 
+# TODO: fix ptw arguments
+watch:
+	@.venv/bin/ptw -- -vv -s tests/
 
+# TODO: Check --profile argument
 ipython:
 	@.venv/bin/ipython
 
 test:
-	@.venv/bin/pytest -vv -s
+	@.venv/bin/pytest -vv -s tests/
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
