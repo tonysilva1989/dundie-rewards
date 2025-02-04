@@ -1,0 +1,1 @@
+PEOPLE_CSV = "tests/assets/names.csv"
