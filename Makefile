@@ -14,6 +14,8 @@ virtualenv:
 ipython:
 	@.venv/bin/ipython
 
+test:
+	@.venv/bin/pytest -vv -s
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
