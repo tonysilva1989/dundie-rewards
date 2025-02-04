@@ -8,7 +8,7 @@ install:
 
 
 virtualenv:
-	@.venv/bin/python3 -m pip -m venv .venv
+	@.venv/bin/python -m pip -m venv .venv
 
 
 ipython:
