@@ -18,7 +18,9 @@ def create_new_file(tmpdir):
 
 @pytest.mark.unit
 @pytest.mark.high
-def test_load(create_new_file):
+def test_load(request):
+
+    request.addfinalizer(lambda: print("\nPrinting at the end\n"))
     """ Test load function."""
     assert len(load(PEOPLE_CSV)) == 2
     assert load(PEOPLE_CSV)[0][0] =='T'

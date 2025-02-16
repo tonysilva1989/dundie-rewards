@@ -21,6 +21,9 @@ ipython:
 test:
 	@.venv/bin/pytest -vv -s tests/
 
+testci:
+	@pytest -vv tests/ --junitxml=ouput.xml
+
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
 	@find ./ -name '__pycache__' -exec rm -rf {} \;
