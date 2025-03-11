@@ -18,8 +18,15 @@ watch:
 ipython:
 	@.venv/bin/ipython
 
+fmt:
+	@.venv/bin/black
+	# black --check --diff folder1 folder2 ...
+
 test:
 	@.venv/bin/pytest -vv -s tests/
+
+integrationtest:
+	@.venv/bin/pytest -s -m "integration"
 
 testci:
 	@pytest -vv tests/ --junitxml=ouput.xml
